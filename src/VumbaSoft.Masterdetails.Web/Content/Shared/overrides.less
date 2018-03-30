@@ -1,0 +1,209 @@
+﻿@import "../theme";
+
+/* Bootstrap */
+a:hover {
+    text-decoration: none;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    background: linear-gradient(@active-from-color, @active-to-color);
+    color: @active-color;
+    z-index: 1;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #EEEEEE;
+}
+
+.btn-primary:not(:disabled):not(.disabled) {
+    background: linear-gradient(#84b2ca, #67a0be);
+    border: 1px solid #5997b8;
+
+    &:focus,
+    &:hover,
+    &:active {
+        background: linear-gradient(#75a9c4, #5997b8);
+        border: 1px solid #5997b8;
+    }
+}
+
+.table {
+    margin-bottom: 0;
+
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th {
+        vertical-align: middle;
+        border-bottom: none;
+        white-space: nowrap;
+        border-top: none;
+    }
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.input-group .form-control {
+    z-index: 1;
+}
+
+@-ms-viewport {
+    width: auto;
+}
+
+/* JQuery-UI Datepicker */
+.ui-datepicker {
+    padding: 0;
+
+    .ui-widget-header {
+        background: linear-gradient(@active-from-color, @active-to-color);
+        border-radius: 3px 3px 0 0;
+        color: @active-color;
+        border: none;
+
+        .ui-state-hover {
+            background: none;
+            cursor: pointer;
+            border: none;
+        }
+
+        .ui-datepicker-prev span {
+            background-image: url(../../Images/JQueryUI/ui-icons_ffffff_256x240.png);
+            background-position: -96px -16px;
+        }
+
+        .ui-datepicker-next span {
+            background-image: url(../../Images/JQueryUI/ui-icons_ffffff_256x240.png);
+            background-position: -32px -16px;
+        }
+    }
+
+    table {
+        margin: 0;
+
+        th {
+            font-size: 10px;
+        }
+
+        tr {
+            &:first-child td {
+                padding-top: 3px;
+            }
+
+            &:last-child td {
+                padding-bottom: 3px;
+            }
+        }
+
+        td {
+            padding-right: 3px;
+
+            &:first-child {
+                padding-left: 3px;
+            }
+
+            .ui-state-default {
+                text-align: center;
+                border-radius: 5px;
+                background: none;
+                border: none;
+            }
+
+            .ui-state-highlight {
+                background: linear-gradient(lighten(@active-from-color, 40%), lighten(@active-to-color, 65%));
+            }
+
+            .ui-state-active,
+            .ui-state-hover {
+                background: linear-gradient(@active-from-color, @active-to-color);
+                text-shadow: 1px 0 0 @content-color;
+                color: @active-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .ui-timepicker-div {
+        > dl {
+            margin: 0;
+        }
+
+        .ui_tpicker_time {
+            text-align: center;
+            margin: 0 0 5px;
+
+            .ui_tpicker_time_input {
+                text-align: center;
+                border: none;
+            }
+        }
+
+        .ui_tpicker_time_label,
+        .ui_tpicker_hour_label,
+        .ui_tpicker_minute_label,
+        .ui_tpicker_second_label,
+        .ui_tpicker_millisec_label,
+        .ui_tpicker_timezone_label {
+            display: none;
+        }
+
+        .ui_tpicker_hour,
+        .ui_tpicker_minute,
+        .ui_tpicker_second,
+        .ui_tpicker_millisec,
+        .ui_tpicker_timezone {
+            margin: 0 15px 10px;
+        }
+    }
+}
+
+/* Mvc.Datalist */
+.datalist-dialog th {
+    text-align: center !important;
+}
+
+.datalist-input {
+    outline: none;
+}
+
+/* Mvc.Grid */
+.mvc-grid {
+    overflow-x: auto;
+    width: 100%;
+
+    th {
+        text-align: center !important;
+        padding-right: 30px;
+        padding-left: 30px;
+        height: 2.65em;
+    }
+}
+
+.mvc-grid-pager ul {
+    justify-content: center;
+    margin: 8px;
+
+    span {
+        border: 1px solid #DEE2E6;
+        padding: 0.4em 0.8em;
+        position: relative;
+        margin-left: -1px;
+    }
+}
+
+.mvc-grid-popup .invalid {
+    outline-color: @validation-color;
+    border-color: @validation-color;
+}
+
+/* JsTree */
+.js-tree-view {
+    padding: 7px 0 3px;
+    display: none;
+}

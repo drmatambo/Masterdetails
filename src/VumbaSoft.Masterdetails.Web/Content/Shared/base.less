@@ -1,0 +1,30 @@
+﻿@import "../theme";
+
+html {
+    font-size: 14px;
+}
+
+body {
+    color: @content-color;
+
+    &.private {
+        background-image: @background-image;
+        background-color: @background-color;
+    }
+
+    &.public {
+        background-image: @content-background-image;
+        background-color: @content-background-color;
+    }
+}
+
+.separator {
+    border-bottom: 2px solid #F5F5F5;
+    border-top: 2px solid #DDDDDD;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    color: @color;
+}
